@@ -1,8 +1,6 @@
 $main-color: #f2bfcb;
 $font-color: #424242;
 
-// test message
-
 body {
   font-family: "Noto Sans JP", sans-serif;
 }
@@ -14,6 +12,11 @@ main {
   margin: 104px 0 80px 0;
   background-color: #f5f5f5;
   overflow: scroll;
+  // .cover {
+  // background-color: #000;
+  // top: 0;
+  // right: 0;
+  // }
   h2 {
     margin: 16px 0 0 10px;
     font-size: 12px;
@@ -27,7 +30,7 @@ main {
     padding: 24px 15px 32px 16px;
     margin: 5px 0 0 0;
     border-top: $main-color 2px solid;
-    .card1 {
+    .card {
       width: 108px;
       height: 103px;
       background-color: #fff;
@@ -43,15 +46,35 @@ main {
           &::before {
             content: url("../img/icon_question.svg");
             position: absolute;
-            top: 0;
-            right: 0;
+            top: 8px;
+            right: 10px;
           }
         }
-        p {
-          font-size: 8px;
-          font-weight: bold;
-        }
+      }
+      p {
+        font-size: 8px;
+        font-weight: bold;
       }
     }
+  }
+}
+.card1 {
+  width: 108px;
+  height: 103px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 5px -4px rgba(0, 0, 0, 0.6);
+  .cosmeTtlwrap {
+    height: 24px;
+    h3 {
+      font-size: 10px;
+      font-weight: bold;
+      margin: 2px 0 2px 3px;
+      position: relative;
+    }
+  }
+  p {
+    font-size: 8px;
+    font-weight: bold;
   }
 }
