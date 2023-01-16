@@ -1,0 +1,107 @@
+//header
+
+$main-color: #f2bfcb;
+$font-color: #424242;
+header {
+  height: 104px;
+  width: 100%;
+  background-color: $main-color;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  position: fixed;
+  top: 0;
+  h1 {
+    margin: 35px 0 0 15px;
+  }
+  form {
+    width: 200px;
+    height: 36px;
+    display: inline-block;
+    background-color: #fff;
+    margin: 56px 0 15px 0;
+    border-radius: 4px;
+    input {
+      width: 100%;
+      height: 100%;
+      padding: 11px 0 9px 11px;
+      color: $main-color;
+      &:focus {
+        outline: solid 2px $main-color;
+        border-radius: 4px;
+      }
+    }
+  }
+  #nav {
+    position: absolute;
+    height: 664px;
+    width: 300px;
+    right: -300px;
+    top: 104px;
+    background-color: #fff;
+    z-index: 100;
+    // border: $main-color 2px solid;
+    transition: 0.5s;
+    &.active {
+      right: 0;
+    }
+    ul {
+      li {
+        height: 74px;
+        list-style-type: none;
+        border-bottom: 2px $main-color solid;
+
+        a {
+          position: relative;
+          display: block;
+          height: 100%;
+          font-size: 15px;
+          color: $main-color;
+          padding: 27px 0 0 67px;
+          font-weight: bold;
+          &:before {
+            content: url("../img/icon_dia.svg");
+            position: absolute;
+            top: 19px;
+            left: 19px;
+          }
+        }
+      }
+    }
+  }
+  .ham {
+    position: relative;
+    width: 42px;
+    height: 37px;
+    margin: 51px 15px 12px 0;
+    span {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 8px;
+      background: #fff;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      transition: all 0.5s;
+      &:first-child {
+        transform: translateY(-16px);
+      }
+      &:last-child {
+        transform: translateY(16px);
+      }
+    }
+    &.active span:first-child {
+      transform: rotate(45deg);
+    }
+    &.active span:nth-child(2) {
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+    &.active span:last-child {
+      transform: rotate(-45deg);
+    }
+  }
+}
