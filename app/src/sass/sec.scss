@@ -6,8 +6,12 @@ main {
   height: 696px;
   margin: 104px 0 0 0;
   padding: 26px 0 290px 0;
+  position: relative;
   z-index: 1;
   ul {
+    position: relative;
+    z-index: 1;
+
     li {
       height: 48px;
       width: 100%;
@@ -25,12 +29,12 @@ main {
         font-weight: bold;
         padding: 14px 0 0 41px;
         color: $font-color;
-        // position: relative;
+        position: relative;
         span {
           width: 390px;
           height: 2px;
           background-color: $main-color;
-          // position: absolute;
+          position: absolute;
           top: 0;
           left: 0;
           margin: 40px 0 0 0;
